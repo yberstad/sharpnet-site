@@ -23,5 +23,5 @@ Cloudflare dashboard, Workers & Pages, Create, Pages, Connect to Git, pick this 
 - Build output directory: `dist`
 - Environment variable: `NODE_VERSION` = `22`
 
-Then add the custom domain `sharpnet.no` under the project's Custom domains tab.
+Then add the custom domain `www.sharpnet.no` under the project's Custom domains tab (`siteUrl` is the www address).
 If the domain's DNS is not on Cloudflare, Cloudflare shows the records to add at the DNS host.
