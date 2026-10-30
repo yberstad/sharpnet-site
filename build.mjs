@@ -89,6 +89,8 @@ export function build({ production = false } = {}) {
   cpSync(join(root, 'src', 'fonts'), join(dist, 'fonts'), { recursive: true });
   cpSync(join(root, 'src', 'favicon.svg'), join(dist, 'favicon.svg'));
   writeFileSync(join(dist, '.nojekyll'), '');
+  // Files served as-is from the site root, e.g. search engine verification files.
+  if (existsSync(join(root, 'src', 'static'))) cpSync(join(root, 'src', 'static'), dist, { recursive: true });
 
   const urls = [];
   for (const lang of langs) {
